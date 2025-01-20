@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Beans - Current Order</title>
+</head>
+<body>
+    <h1>Your Order</h1>
+    <ul>
+        {% for item in order %}
+        <li>{{ item.name }} - ${{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Total: ${{ total }}</h3>
+    <a href="/">Back to Menu</a>
+    <a href="/clear_order">Clear Order</a>
+</body>
+</html>

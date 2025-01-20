@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Beans - Menu</title>
+</head>
+<body>
+    <h1>Welcome to Java Beans</h1>
+    <h2>Menu</h2>
+    <form action="/order" method="post">
+        {% for item in menu %}
+        <div>
+            <input type="checkbox" name="items" value="{{ loop.index }}">
+            {{ item.name }} - ${{ item.price }}
+        </div>
+        {% endfor %}
+        <button type="submit">Place Order</button>
+    </form>
+    <a href="/current_order">View Current Order</a>
+</body>
+</html>
